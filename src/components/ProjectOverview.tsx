@@ -18,41 +18,41 @@ export default function ProjectOverview({ project, onUpdateProject }: ProjectOve
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200/60 shadow-md shadow-slate-100/50 overflow-hidden" id="project-overview-card">
-      <div className="p-8 md:p-10 bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-950 text-white relative">
-        <div className="absolute right-6 top-6 opacity-10 pointer-events-none">
+      <div className="p-8 md:p-10 bg-gradient-to-br from-slate-50 via-slate-100/90 to-slate-150/70 text-slate-800 border-b border-slate-200/40 relative">
+        <div className="absolute right-6 top-6 text-slate-400 opacity-[0.12] pointer-events-none">
           <Sparkles size={120} />
         </div>
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-xs text-indigo-300 font-semibold mb-4 shadow-sm">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-200/60 text-[11px] text-indigo-700 font-bold mb-4 shadow-3xs">
             <Award size={14} /> โครงการฝึกอบรมระดับพรีเมียม
           </div>
           
           {isEditing ? (
             <div className="space-y-4">
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1.5">ชื่อโครงการอบรม</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1.5">ชื่อโครงการอบรม</label>
                 <input
                   type="text"
-                  className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                  className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 text-lg focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-bold"
                   value={edited.name}
                   onChange={(e) => setEdited({ ...edited, name: e.target.value })}
                 />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">สถานที่จัดงาน</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">สถานที่จัดงาน</label>
                   <input
-                    type="text"
-                    className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
-                    value={edited.location}
-                    onChange={(e) => setEdited({ ...edited, location: e.target.value })}
+                     type="text"
+                     className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-semibold"
+                     value={edited.location}
+                     onChange={(e) => setEdited({ ...edited, location: e.target.value })}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">กลุ่มเป้าหมาย / คำอธิบายผู้ร่วมงาน</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">กลุ่มเป้าหมาย / คำอธิบายผู้ร่วมงาน</label>
                   <input
                     type="text"
-                    className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                    className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-semibold"
                     value={edited.attendeesDescription}
                     onChange={(e) => setEdited({ ...edited, attendeesDescription: e.target.value })}
                   />
@@ -60,46 +60,46 @@ export default function ProjectOverview({ project, onUpdateProject }: ProjectOve
               </div>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">วันที่เริ่มต้น</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">วันที่เริ่มต้น</label>
                   <input
                     type="date"
-                    className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                    className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium"
                     value={edited.startDate}
                     onChange={(e) => setEdited({ ...edited, startDate: e.target.value })}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">วันที่สิ้นสุด</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">วันที่สิ้นสุด</label>
                   <input
                     type="date"
-                    className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                    className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium"
                     value={edited.endDate}
                     onChange={(e) => setEdited({ ...edited, endDate: e.target.value })}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">ยอดผู้เข้าร่วม (นาย)</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">ยอดผู้เข้าร่วม (นาย)</label>
                   <input
                     type="number"
-                    className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                    className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-bold"
                     value={edited.attendeeCount}
                     onChange={(e) => setEdited({ ...edited, attendeeCount: parseInt(e.target.value) || 0 })}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 mb-1.5">ยอดครูฝึก (นาย)</label>
+                  <label className="block text-xs font-bold text-slate-600 mb-1.5">ยอดครูฝึก (นาย)</label>
                   <input
                     type="number"
-                    className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                    className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-bold"
                     value={edited.instructorCount}
                     onChange={(e) => setEdited({ ...edited, instructorCount: parseInt(e.target.value) || 0 })}
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-bold text-slate-300 mb-1.5">วัตถุประสงค์และหมายเหตุเพิ่มเติม</label>
+                <label className="block text-xs font-bold text-slate-600 mb-1.5">วัตถุประสงค์และหมายเหตุเพิ่มเติม</label>
                 <textarea
-                  className="w-full px-3 py-2 bg-slate-900/60 border border-slate-800 rounded-xl text-white h-20 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 transition-all"
+                  className="w-full px-3 py-2 bg-white border border-slate-250 rounded-xl text-slate-800 h-20 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium"
                   value={edited.notes}
                   onChange={(e) => setEdited({ ...edited, notes: e.target.value })}
                 />
@@ -107,27 +107,27 @@ export default function ProjectOverview({ project, onUpdateProject }: ProjectOve
             </div>
           ) : (
             <>
-              <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight leading-snug text-white mb-3">
+              <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight leading-snug text-slate-900 mb-3">
                 {project.name}
               </h1>
-              <p className="text-slate-300 text-sm md:text-base font-medium max-w-3xl mb-6 leading-relaxed">
+              <p className="text-slate-600 text-xs md:text-sm font-medium max-w-3xl mb-6 leading-relaxed">
                 {project.notes}
               </p>
             </>
           )}
 
-          <div className="flex flex-wrap gap-y-3 gap-x-6 text-xs text-slate-300 pt-4 border-t border-slate-800/80">
+          <div className="flex flex-wrap gap-y-3 gap-x-6 text-xs text-slate-500 pt-4 border-t border-slate-200">
             <div className="flex items-center gap-2">
-              <Calendar size={15} className="text-indigo-400" />
-              <span>วันที่: <span className="font-bold text-white">{project.startDate} ถึง {project.endDate}</span></span>
+              <Calendar size={15} className="text-indigo-600" />
+              <span>วันที่: <span className="font-bold text-slate-800">{project.startDate} ถึง {project.endDate}</span></span>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin size={15} className="text-emerald-400" />
-              <span>สถานที่: <span className="font-bold text-white">{project.location}</span></span>
+              <MapPin size={15} className="text-emerald-600" />
+              <span>สถานที่: <span className="font-bold text-slate-800">{project.location}</span></span>
             </div>
             <div className="flex items-center gap-2">
-              <Users size={15} className="text-amber-400" />
-              <span>กลุ่มเป้าหมาย: <span className="font-bold text-white">{project.attendeesDescription}</span></span>
+              <Users size={15} className="text-amber-600" />
+              <span>กลุ่มเป้าหมาย: <span className="font-bold text-slate-800">{project.attendeesDescription}</span></span>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function ProjectOverview({ project, onUpdateProject }: ProjectOve
             <>
               <button
                 onClick={() => setIsEditing(false)}
-                className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold rounded-xl transition-all border border-slate-700 cursor-pointer"
+                className="px-4 py-2 bg-white hover:bg-slate-50 text-slate-600 text-xs font-semibold rounded-xl transition-all border border-slate-200 cursor-pointer shadow-3xs"
               >
                 ยกเลิก
               </button>
@@ -154,7 +154,7 @@ export default function ProjectOverview({ project, onUpdateProject }: ProjectOve
                 setEdited({ ...project });
                 setIsEditing(true);
               }}
-              className="flex items-center gap-1.5 px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-xs font-bold rounded-xl backdrop-blur-xs transition-all border border-white/10 cursor-pointer"
+              className="flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl border border-slate-200/80 transition-all shadow-3xs cursor-pointer"
             >
               <Edit2 size={13} /> แก้ไขข้อมูลโครงการ
             </button>
