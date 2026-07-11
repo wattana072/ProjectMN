@@ -1,0 +1,6 @@
+{
+  "name": "TCMS: ระบบวางแผนและบริหารงานอบรม",
+  "description": "ระบบบริหารจัดการโครงการอบรม กำหนดการ กิจกรรม พิธีเปิด-ปิด คำกล่าวรายงาน-ให้โอวาทโดย AI จัดการทีมงาน ยานพาหนะ และงบประมาณอย่างเป็นระบบครบวงจร",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
